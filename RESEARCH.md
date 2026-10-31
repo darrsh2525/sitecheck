@@ -13,3 +13,9 @@
 **What I tried:** I set the timeout to 0.01 seconds, which is far too short. Both sites reported timed out, and the tool did not crash.
 
 **What I learned:** A timeout means a dead site is reported as a problem and the tool moves on to the next site.
+
+## 3. Testing without the real internet (mocking)
+
+**Why I needed it:** My tests should not depend on a working internet connection, because real websites can be slow, down, or change.
+
+**What I learned:** The tests replace requests.get with a fake one that returns a pretend answer. This also lets me test things that are hard to cause on purpose, like a timeout.
