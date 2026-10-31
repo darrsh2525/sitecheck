@@ -1,0 +1,10 @@
+{
+  "sites": [
+    "https://example.com",
+    "https://www.python.org",
+    "https://github.com"
+  ],
+  "timeout": 5,
+  "slow_threshold": 2.0,
+  "cert_warn_days": 14
+}
