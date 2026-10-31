@@ -19,3 +19,15 @@
 **Why I needed it:** My tests should not depend on a working internet connection, because real websites can be slow, down, or change.
 
 **What I learned:** The tests replace requests.get with a fake one that returns a pretend answer. This also lets me test things that are hard to cause on purpose, like a timeout.
+
+## 4. Problems I hit along the way
+
+**Terminal stuck on a ">" prompt**
+- What happened: I typed a git command but forgot the closing quote, so the terminal kept waiting for me to finish the text and swallowed the next commands.
+- How I fixed it: I pressed Ctrl+C to cancel, then typed the command again with both quotes.
+- What I learned: a ">" prompt usually means an unclosed quote.
+
+**GitHub rejected my password**
+- What happened: when I ran git push, GitHub said "Password authentication is not supported".
+- How I fixed it: I created a personal access token on GitHub (with the "repo" permission) and used it instead of my password.
+- What I learned: GitHub uses tokens instead of passwords for git, because they can be limited and revoked.
