@@ -1,8 +1,12 @@
 # AI usage
 
-> TEMPLATE: fill this in honestly. Be specific.
+**Tools used:** Claude. I asked it to suggest a project idea (a website health checker, to fit a DevOps role), and it wrote the first version of the code, the tests and the documentation templates. It also guided me through running the project, setting up git and pushing to GitHub.
 
-- **Tools used and for what:** (e.g. Claude to suggest the project idea and a first draft of the code)
-- **Incorrect or unhelpful suggestions:** (e.g. things that didn't run, were over-complicated, or that I changed)
-- **How I verified suggestions:** (e.g. read the docs for `ssl`, ran the tool against real sites, wrote tests,
-  deliberately broke things like a bad URL or expired-cert test site such as expired.badssl.com)
+**Incorrect or unhelpful suggestions:**
+- Claude told me there were 11 tests, but pytest showed 13, because one test runs four times with different inputs.
+- The SSL error messages are very long and hard to read.
+
+**How I checked things:**
+- I ran the tests myself (13 passed).
+- I ran the tool against real sites and against deliberately broken ones (expired certificate, wrong hostname, HTTP 500 error, slow response, nonexistent domain), and checked the exit codes (0 when healthy, 1 when there are problems).
+- I tested a very short timeout to see that the tool reports failures and carries on instead of crashing.
